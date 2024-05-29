@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('imgs/windowsdefault.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      min-height: 3500px; 
+    }
+
+    .translucent-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75px; 
+      backdrop-filter: blur(10px); 
+      background-color: rgba(0, 0, 0, 0.3); 
+      z-index: 1; 
+    }
+
+    .sign-in-button {
+      border-color: rgb(34, 34, 34);
+      border-style: solid;
+      border-width: 0px;
+      color: white;
+      height: 36px;
+      width: 80px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 350;
+      margin-left: 1160px;
+      margin-right: 0px;
+      margin-top: 20px; 
+      margin-bottom: 2000px;
+      font-family: "Poppins", sans-serif;
+      transition: background-color 0.5s, color 0.15s;
+      position: relative; 
+      position: fixed;
+      z-index: 2; /* Puts the button above the bar */
+      background-color: transparent; /* Transparent background */
+    }
+
+    .sign-in-button:hover {
+      background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white on hover */
+      color: white;
+    }
+
+    .sign-in-button:active {
+      opacity: 0.7;
+    }
+    .register-button {
+      border-color: rgb(34, 34, 34);
+      border-style: solid;
+      border-width: 0px;
+      color: white;
+      height: 36px;
+      width: 80px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 350;
+      margin-left: 1250px;
+      margin-right: 0px;
+      margin-top: 20px; 
+      margin-bottom: 2000px;
+      font-family: "Poppins", sans-serif;
+      transition: background-color 0.5s, color 0.15s;
+      position: relative; 
+      position: fixed;
+      z-index: 2; /* Puts the button above the bar */
+      background-color: transparent; /* Transparent background */
+    }
+
+    .register-button:hover {
+      background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white on hover */
+      color: white;
+    }
+
+    .register-button:active {
+      opacity: 0.7;
+    }
+
+    .location-button {
+      border-color: rgb(34, 34, 34);
+      border-style: solid;
+      border-width: 0px;
+      color: white;
+      height: 36px;
+      width: 160px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 350;
+      margin-left: 990px;
+      margin-right: 0px;
+      margin-top: 20px; 
+      margin-bottom: 2000px;
+      padding-left: 1px;
+      padding-right: 1px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      font-family: "Poppins", sans-serif;
+      transition: background-color 0.5s, color 0.15s;
+      position: relative; 
+      position: fixed;
+      z-index: 2; /* Puts the button above the bar */
+      background-color: transparent; /* Transparent background */
+    }
+
+    .location-button:hover {
+      background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white on hover */
+      color: white;
+    }
+
+    .location-button:active {
+      opacity: 0.7;
+    }
+
+    #image1 {
+    position: absolute;
+    top: 75px;  /* Distance from the top of the closest relatively positioned parent */
+    left: 0px;  /* Distance from the left of the closest relatively positioned parent */
+    }
+
+    #image1 {
+    width: 100%;  /* Width in pixels */
+    height: 600px; /* Height in pixels */
+    }
+#image2 {
+    position: absolute;
+    top: 60px;  /* Distance from the top of the closest relatively positioned parent */
+    left: 33%;  /* Distance from the left of the closest relatively positioned parent */
+    margin: auto;
+}
+#image2 {
+    width: 37.5%;  /* Width in pixels */
+    height: 300px; /* Height in pixels */
+    }
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+  </style>
+</head>
+<body>
+  <div class="translucent-bar"></div>
+  <button style="font-size: 17px" class="sign-in-button" id="btn">Login</button>
+  <button style="font-size: 17px" class="register-button" id="btn">Register</button>
+  <button style="font-size: 17px" class="location-button" id="btn">Find a Location</button>
+
+
+  <img src="imgs/1631039.jpg" alt="Descriptive Text" id="image1">
+  <img src="imgs/slogan.png" alt="Descriptive Text" id="image2">
+
+  <!-- Not too sure about this part yet, But I do want to impliment a search bar in the center-->
+  <!-- Ask ward about whether image 1 top position should be 0px or 75px-->
+
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  
+
+  <!-- Makes the page scrollable sort of, probably need to adjust it later -->
+  <div style="height: 1800px;"></div>
+
+  <!-- Link to the JavaScript file which i probably wont use ever-->
+  <script src="script.js"></script>
+</body>
+</html>
+
